@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
 
 
     public function Apprentice(){
@@ -23,3 +24,6 @@ class Course extends Model
 }
 
 
+=======
+}
+>>>>>>> 7b018d1cca67d3c49b6e453eca7fa766e31d831e
