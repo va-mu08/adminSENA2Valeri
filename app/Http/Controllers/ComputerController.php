@@ -8,22 +8,8 @@ use App\Models\Computer;
 
 class ComputerController extends Controller
 {
-    public function create(){
-
-    return view('computers.create');
-
+    public function index()
+    {
+        return response()->json(Computer::all());
     }
-
-
-    public function store(Request $request)
-{
-    $computer = new Computer();
-    $computer->number = $request->number;
-    $computer->brand = $request->brand;
-    $computer->save();
-
-    return $computer;
 }
-
-}
-
