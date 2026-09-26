@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class apprentice extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'email', 'cell_number']; 
 }
