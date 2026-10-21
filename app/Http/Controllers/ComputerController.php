@@ -15,6 +15,17 @@ class ComputerController extends Controller
       return response()->json($computers);
     }
 
+    public function listado()
+    {
+        $computers = Computer::all();
+        return view('computers.index', compact('computers'));
+    }
+
+    public function create()
+    {
+        return view('computers.create');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -44,6 +55,12 @@ class ComputerController extends Controller
     {
         $computer->delete();
         return $computer;
+    }
+
+    public function show($id) 
+    {
+        $computer = Computer::findOrFail($id);
+        return response()->json($computer);
     }
 
 }

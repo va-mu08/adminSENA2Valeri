@@ -16,6 +16,8 @@ use App\Http\Controllers\AreaController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/computers',[ComputerController::class,'listado'])->name('computers.index');
+
 Route::get('/computers/create',[ComputerController::class,'create']);
 Route::post('/computers/store',[ComputerController::class,'store'])->name('computers.store');
 

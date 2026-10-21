@@ -36,18 +36,18 @@ Route::get('computers/{computer}', [ComputerController::class,'show'])->name('ap
 Route::put('computers/{computer}',[ComputerController::class,'update'])->name('api.v1.computer.update');
 Route::delete('computers/{computer}',[ComputerController::class,'destroy'])->name('api.v1.computer.destroy');
 
-Route::get('/trainingCenters', [TrainingCentersController::class, 'index'])->name('api.v1.trainingCenters.index');
-Route::post('trainingCenters', [TrainingCentersController::class,'store'])->name('api.v1.trainingCenters.store');
-Route::get('trainingCenters/{trainingCenter}', [TrainingCentersController::class,'show'])->name('api.v1.trainingCenters.show');
-Route::put('trainingCenters/{trainingCenter}',[TrainingCentersController::class,'update'])->name('api.v1.trainingCenter.update');
-Route::delete('trainingCenters/{trainingCenter}',[TrainingCentersController::class,'destroy'])->name('api.v1.trainingCenter.destroy');
+Route::get('/trainingcenters', [TrainingCentersController::class, 'index'])->name('api.v1.trainingcenters.index');
+Route::post('trainingcenters', [TrainingCentersController::class,'store'])->name('api.v1.trainingcenters.store');
+Route::get('trainingcenters/{trainingcenter}', [TrainingCentersController::class,'show'])->name('api.v1.trainingcenters.show');
+Route::put('trainingcenters/{trainingcenter}',[TrainingCentersController::class,'update'])->name('api.v1.trainingcenter.update');
+Route::delete('trainingcenters/{trainingcenter}',[TrainingCentersController::class,'destroy'])->name('api.v1.trainingcenter.destroy');
 
  
 Route::get('/teachers', [TeacherController::class, 'index'])->name('api.v1.teachers.index');
 Route::post('teachers', [TeacherController::class,'store'])->name('api.v1.teachers.store');
 Route::get('teachers/{teacher}', [TeacherController::class,'show'])->name('api.v1.teachers.show');
 Route::put('teachers/{teacher}',[TeacherController::class,'update'])->name('api.v1.teacher.update');
-Route::delete('teachers/{teacher}',[TTeacherController::class,'destroy'])->name('api.v1.teacher.destroy');
+Route::delete('teachers/{teacher}',[TeacherController::class,'destroy'])->name('api.v1.teacher.destroy');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('api.v1.courses.index');
 Route::post('courses', [CourseController::class,'store'])->name('api.v1.courses.store');

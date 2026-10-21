@@ -15,6 +15,11 @@ class AreaController extends Controller
         return response()->json($areas);
     }
 
+    public function create()
+    {
+        return view('areas.create');
+    }
+
 
 public function store(Request $request)
     {
@@ -43,5 +48,11 @@ public function store(Request $request)
     {
         $area->delete();
         return $area;
+    }
+
+    public function show($id) 
+    {
+        $area = Area::findOrFail($id);
+        return response()->json($area);
     }
 }
